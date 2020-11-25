@@ -5,8 +5,10 @@ def nyc_pigeon_organizer(data)
   data.each_with_object({}) do |(key, val)|, output|
     value.each do |key2, val2|
       v2.each do |name|
-         = name
+        if !output(name) = name
+          output(name) = {}
       end
+      if !key2()
     end
     output
   end
